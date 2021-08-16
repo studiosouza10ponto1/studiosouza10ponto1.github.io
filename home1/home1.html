@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Homepage 1</title>
+
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <style>
+        #loader-wrapper {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 110;
+            overflow: hidden;
+            background: #000;
+        }
+
+        @keyframes loader {
+            0%, 10%, 100% {
+                width: 80px;
+                height: 80px;
+            }
+            65% {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @keyframes loaderBlock {
+            0%, 30% {
+                transform: rotate(0);
+            }
+            55% {
+                background-color: #FFBE9A;
+            }
+            100% {
+                transform: rotate(90deg);
+            }
+        }
+
+        @keyframes loaderBlockInverse {
+            0%, 20% {
+                transform: rotate(0);
+            }
+            55% {
+                background-color: #FFBE9A;
+            }
+            100% {
+                transform: rotate(-90deg);
+            }
+        }
+
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+            animation: loader 1.2s infinite ease-in-out;
+        }
+
+        .loader span {
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: #FFBE6A;
+            animation: loaderBlock 1.2s infinite ease-in-out both;
+        }
+
+        .loader span:nth-child(1) {
+            top: 0;
+            left: 0;
+        }
+
+        .loader span:nth-child(2) {
+            top: 0;
+            right: 0;
+            animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+        }
+
+        .loader span:nth-child(3) {
+            bottom: 0;
+            left: 0;
+            animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+        }
+
+        .loader span:nth-child(4) {
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader-wrapper">
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<header class="header transparent">
+    <a href="home1.html#home-anchor" id="logo" class="anchor-link">
+        <img src="../img/cartel-logo-black.png" alt="">
+    </a>
+    <div class="header-content">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-list-item">
+                    <a href="home1.html#home-anchor" class="nav-item-link anchor-link">Home</a>
+                </li>
+                <li class="nav-list-item"><a href="home1.html#about_us-anchor" class="nav-item-link anchor-link">About us</a></li>
+                <li class="nav-list-item"><a href="home1.html#services-anchor" class="nav-item-link anchor-link">Services</a></li>
+                <li class="nav-list-item"><a href="home1.html#staff-anchor" class="nav-item-link anchor-link">Staff</a></li>
+                <li class="nav-list-item"><a href="home1.html#gallery-anchor" class="nav-item-link anchor-link">Gallery</a></li>
+                <li class="nav-list-item"><a href="home1.html#products-anchor" class="nav-item-link anchor-link">Products</a></li>
+                <li class="nav-list-item"><a href="home1.html#contacts-anchor" class="nav-item-link anchor-link">Contacts</a></li>
+            </ul>
+        </nav>
+        <a href="cart-1.html" class="busket">
+            <img src="../img/busket.png" alt="">
+            <span class="busket-amount">1</span>
+            <span class="busket-price">
+                total: <i>149.95$</i>
+            </span>
+        </a>
+        <div class="sign-up">
+            <a href="home1.html#" class="open-popup" data-rel="1">Log in </a>
+            <span> / </span>
+            <a href="home1.html#" class="open-popup" data-rel="2">Sing up</a>
+        </div>
+    </div>
+    <div class="menu-mobile-wrap">
+        <div class="menu-mobile">
+            <span></span>
+        </div>
+        <span>menu</span>
+    </div>
+</header>
+
+<div class="empty-space marg-md-b70 marg-lg-b0"></div>
+
+
+<div class="banner" style="background-image: url(../img/homepage1/baner-bg.jpg)" id="home-anchor">
+    <div class="banner_content type-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="empty-space marg-md-b20 marg-lg-b100"></div>
+                    <div class="simple-text">
+                        <div class="section-title">keep it handsome</div>
+                        <div class="empty-space marg-md-b0 marg-lg-b20"></div>
+                        <h1 class="h1">
+                            The barber shop
+                        </h1>
+                    </div>
+                    <div class="empty-space marg-md-b20 marg-lg-b100"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-lg-offset-3 col-sm-4">
+                        <div class="empty-space marg-lg-b50"></div>
+                        <div class="info">
+                            <span>Work time:</span><br>
+                            <span>mon - sun / 09:00 - 20:00</span>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b50"></div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                        <div class="empty-space marg-xs-b0 marg-lg-b50"></div>
+                        <div class="info">
+                            <span>Free call:</span><br>
+                            <a href="tel:+80442343456"> 8 (044) 718 34 09</a>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b50"></div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                        <div class="empty-space marg-xs-b0 marg-lg-b50"></div>
+                        <div class="info">
+                            <span>Adress:</span><br>
+                            <span>USA, NY, 7th Street, 89/217</span>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b50"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="about_us-anchor">
+    <div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b180"></div>
+    <div class="row">
+        <div class="flex_center">
+            <div class="col-md-7">
+                <div class="aboutPic_block">
+
+                    <div class="aboutPic_Iteams" style="background-image:url(../img/home1_pic1.jpg)"></div>
+                    <div class="aboutPic_Iteams" style="background-image:url(../img/home1_pic2.jpg)"></div>
+                    <div class="aboutPic_Iteams" style="background-image:url(../img/home1_pic3.jpg)"></div>
+                    <div class="aboutPic_Iteams" style="background-image:url(../img/home1_pic4.jpg)"></div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="simple-text">
+                    <div class="empty-space marg-sm-b20 marg-lg-b0"></div>
+                    <p class="section-title">about us</p>
+                    <h2 class="h2">WHY YOU MUST<br>
+                        CHOOSE US</h2>
+                    <p>t enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur</p>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b50"></div>
+                <a href="home1.html#booking-anchor" class="button anchor-link">Book now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="services-anchor">
+    <div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b180"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="simple-text">
+                <p class="section-title">services</p>
+            </div>
+            <div class="empty-space marg-lg-b50"></div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="services_iteam hov">
+                <img class="responsive filter_img" src="../img/homepage1/service1.jpg" alt="">
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <div class="simple-text">
+                    <h4 class="h4">HairCuts</h4>
+                    <p class="small">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex</p>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <div class="price">
+                    <span>price:</span>
+                    <span>from <b>15$</b></span>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <a href="home1.html#" class="button">Show More</a>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="services_iteam hov">
+                <img class="responsive filter_img" src="../img/homepage1/service2.png" alt="">
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <div class="simple-text">
+                    <h4 class="h4">Beardcuts</h4>
+                    <p class="small">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex</p>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <div class="price">
+                    <span>price:</span>
+                    <span>from <b>15$</b></span>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <a href="home1.html#" class="button">Show More</a>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="services_iteam hov">
+                <img class="responsive filter_img" src="../img/homepage1/service3.png" alt="">
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <div class="simple-text">
+                    <h4 class="h4">Clean shave</h4>
+                    <p class="small">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex</p>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <div class="price">
+                    <span>price:</span>
+                    <span>from <b>15$</b></span>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <a href="home1.html#" class="button">Show More</a>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="services_iteam hov">
+                <img class="responsive filter_img" src="../img/homepage1/service4.png" alt="">
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <div class="simple-text">
+                    <h4 class="h4">Cut&style</h4>
+                    <p class="small">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex</p>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <div class="price">
+                    <span>price:</span>
+                    <span>from <b>15$</b></span>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <a href="home1.html#" class="button">Show More</a>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b180"></div>
+
+<div class="swiper-container" data-loop="1" data-auto-height="1">
+    <div class="swiper-button-prev type-1 hidden-lg"></div>
+    <div class="swiper-button-next type-1 hidden-lg"></div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="tt-slider" style="background-image:url(../img/testimonials-bg.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="empty-space marg-lg-b50"></div>
+                            <div class="simple-text light big">
+                                <p class="quotes">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam deserunt pariatur,
+                                    sapiente praesentium quaerat, cumque optio aliquid voluptas, debitis, dolor unde?
+                                    Ipsa architecto exercitationem, libero ipsam atque. Neque culpa aut beatae voluptas
+                                    ducimus, maiores quae iusto blan
+                                </p>
+                            </div>
+                            <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                            <div class="clients">
+                                <img class="radius_img" src="../img/client's-pic.jpg" alt="">
+                                <div class="clients_descr">
+                                    <div class="simple-text">
+                                        <h5 class="h6 light">Rick Castle</h5>
+                                    </div>
+                                    <span>writter</span>
+                                </div>
+                            </div>
+                            <div class="empty-space marg-lg-b50"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="tt-slider" style="background-image:url(../img/testimonials-bg.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="empty-space marg-lg-b50"></div>
+                            <div class="simple-text light big">
+                                <p class="quotes">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam deserunt pariatur,
+                                    sapiente praesentium quaerat, cumque optio aliquid voluptas, debitis, dolor unde?
+                                    Ipsa architecto exercitationem, libero ipsam atque. Neque culpa aut beatae voluptas
+                                    ducimus, maiores quae iusto blan
+                                </p>
+                            </div>
+                            <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                            <div class="clients">
+                                <img class="radius_img" src="../img/client's-pic.jpg" alt="">
+                                <div class="clients_descr">
+                                    <div class="simple-text">
+                                        <h5 class="h6 light">Rick Castle</h5>
+                                    </div>
+                                    <span>writter</span>
+                                </div>
+                            </div>
+                            <div class="empty-space marg-lg-b50"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination swiper-pagination-white"></div>
+</div>
+
+<div class="container" id="staff-anchor">
+    <div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b180"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="simple-text">
+                <p class="section-title">staff</p>
+            </div>
+            <div class="empty-space marg-lg-b50"></div>
+        </div>
+        <div class="col-sm-4">
+            <div class="staff_iteams hov cn">
+                <div class="img_wrapp">
+                    <img class="responsive filter_img" src="../img/homepage1/staff1.jpg" alt="">
+                    <ul class="social">
+                        <li><a href="home1.html#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="home1.html#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="home1.html#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="home1.html#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                <div class="simple-text">
+                    <h5 class="h4">Jon Snow</h5>
+                    <span>Hair specialist</span>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <a href="home1.html#booking-anchor" class="button anchor-link">Book Now</a>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="staff_iteams hov cn">
+                <div class="img_wrapp">
+                    <img class="responsive filter_img" src="../img/homepage1/staff2.jpg" alt="">
+                    <ul class="social">
+                        <li><a href="home1.html#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="home1.html#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="home1.html#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="home1.html#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                <div class="simple-text">
+                    <h5 class="h4">Harvey Specter</h5>
+                    <span>Hair specialist</span>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <a href="home1.html#booking-anchor" class="button anchor-link">Book Now</a>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="staff_iteams hov cn">
+                <div class="img_wrapp">
+                    <img class="responsive filter_img" src="../img/homepage1/staff3.jpg" alt="">
+                    <ul class="social">
+                        <li><a href="home1.html#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="home1.html#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="home1.html#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="home1.html#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                <div class="simple-text">
+                    <h5 class="h4">Luise Litt</h5>
+                    <span>Beard specialist</span>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <a href="home1.html#booking-anchor" class="button anchor-link">Book Now</a>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="gallery-anchor">
+    <div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b180"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="simple-text">
+                <p class="section-title">gallery</p>
+            </div>
+            <div class="empty-space marg-lg-b50"></div>
+        </div>
+    </div>
+</div>
+<div class="swiper-container type2" data-loop="0" data-breakpoints="1" data-slides-per-view="3" data-sm-slides="2">
+    <div class="swiper-button-prev type-1"></div>
+    <div class="swiper-button-next type-1"></div>
+    <div class="swiper-wrapper gallery_teams">
+
+        <div class="swiper-slide">
+            <a class="gallery" href="../img/pic1.jpg">
+                <img class=" responsive" src="../img/pic1.jpg" alt="" title="">
+            </a>
+        </div>
+
+        <div class="swiper-slide">
+            <a class="gallery" href="../img/pic2.jpg">
+                <img class=" responsive" src="../img/pic2.jpg" alt="" title="">
+            </a>
+        </div>
+
+        <div class="swiper-slide">
+            <a class="gallery" href="../img/pic3.jpg">
+                <img class=" responsive" src="../img/pic3.jpg" alt="" title="">
+            </a>
+        </div>
+
+        <div class="swiper-slide">
+            <a class="gallery" href="../img/pic2.jpg">
+                <img class=" responsive" src="../img/pic2.jpg" alt="" title="">
+            </a>
+        </div>
+    </div>
+    <div class="swiper-pagination swiper-pagination-white hidden-lg"></div>
+</div>
+
+<div class="container" id="booking-anchor">
+    <div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b180"></div>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="styles no_pdd">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="simple-text">
+                            <p class="section-title">styles</p>
+                        </div>
+                        <div class="empty-space marg-lg-b50"></div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="hov">
+                            <img class="responsive  filter_img" src="../img/nopg.jpg" alt="">
+                            <div class="hidden_">
+                                <div class="simple-text light">
+                                    <p>lorem</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="hov">
+                            <img class="responsive  filter_img" src="../img/nopg2.jpg" alt="">
+                            <div class="hidden_">
+                                <div class="simple-text light">
+                                    <p>lorem</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="hov">
+                            <img class="responsive  filter_img" src="../img/nopg3.jpg" alt="">
+                            <div class="hidden_">
+                                <div class="simple-text light">
+                                    <p>lorem</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="hov">
+                            <img class="responsive  filter_img" src="../img/nopg4.jpg" alt="">
+                            <div class="hidden_">
+                                <div class="simple-text light">
+                                    <p>lorem</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="hov">
+                            <img class="responsive  filter_img" src="../img/nopg5.jpg" alt="">
+                            <div class="hidden_">
+                                <div class="simple-text light">
+                                    <p>lorem</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="hov">
+                            <img class="responsive  filter_img" src="../img/nopg6.jpg" alt="">
+                            <div class="hidden_">
+                                <div class="simple-text light">
+                                    <p>lorem</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6 col-md-offset-1">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="empty-space marg-sm-b50"></div>
+                    <div class="simple-text">
+                        <p class="section-title">booking form</p>
+                    </div>
+                    <div class="empty-space marg-lg-b50"></div>
+                    <div class="simple-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa distinctio ducimus nobis
+                            placeat quis. Consequatur corporis dolorum in iusto officia.</p>
+                    </div>
+
+                    <div class="empty-space marg-lg-b30"></div>
+                </div>
+                <div class="col-sm-6">
+                    <input class="simple-input" type="text" placeholder="Name">
+                    <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                    <input class="simple-input" type="text" placeholder="Email">
+                    <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                    <div class="simple-select style-2">
+                        <select>
+                            <option>Haircuts</option>
+                            <option>Beardcuts</option>
+                            <option>Clean shave</option>
+                            <option>Cut & Style</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="empty-space marg-xs-b10"></div>
+                <div class="col-sm-6">
+                    <input class="simple-input" type="text" placeholder="Phone">
+                    <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                    <input class="simple-input" type="text" placeholder="Date">
+                    <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                    <div class="simple-select style-2">
+                        <select>
+                            <option>Master</option>
+                            <option>John Snow</option>
+                            <option>Harvey Specter</option>
+                            <option>Luise Litt</option>
+                        </select>
+                    </div>
+                    <div class="empty-space marg-lg-b25"></div>
+                    <div class="button-wrap tar">
+                        <a href="home1.html#" class="button">submit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="marg-lg-b100"></div>
+
+<div class="container product-main" id="products-anchor">
+    <div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b100"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="simple-text">
+                <p class="section-title">products</p>
+            </div>
+            <div class="empty-space marg-lg-b50"></div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="products eye_hv">
+                <div class="products-view open-popup" data-rel="3">
+                    <div class="product-view-eye">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <img class="responsive" src="../img/homepage1/jp2.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="simple-text">
+                        <h6 class="h5">5-piece shaving set with merkup hd 34c</h6>
+                    </div>
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="price">
+                        <span>price:</span>
+                        <span><b>148.00$</b></span>
+                    </div>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <a href="home1.html#" class="button">Add To cart</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="products eye_hv">
+                <div class="products-view open-popup" data-rel="3">
+                    <div class="product-view-eye">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <img class="responsive" src="../img/homepage1/jp1.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="simple-text">
+                        <h6 class="h5">Ferdihan "Ambassador" razor</h6>
+                    </div>
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="price">
+                        <span>price:</span>
+                        <span><b>49.95$</b></span>
+                    </div>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <a href="home1.html#" class="button">Add To cart</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="products eye_hv">
+                <div class="products-view open-popup" data-rel="3">
+                    <div class="product-view-eye">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <img class="responsive" src="../img/homepage1/jp.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="simple-text">
+                        <h6 class="h5">5-piece manicure set, case</h6>
+                    </div>
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="price">
+                        <span>price:</span>
+                        <span><b>83.00$</b></span>
+                    </div>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <a href="home1.html#" class="button">Add To cart</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="products eye_hv">
+                <div class="products-view open-popup" data-rel="3">
+                    <div class="product-view-eye">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <img class="responsive" src="../img/homepage1/jp3.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="simple-text">
+                        <h6 class="h5">3-piece shaving set with gillete fusion</h6>
+                    </div>
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="price">
+                        <span>price:</span>
+                        <span><b>265.00$</b></span>
+                    </div>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <a href="home1.html#" class="button">Add To cart</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="products eye_hv">
+                <div class="products-view open-popup" data-rel="3">
+                    <div class="product-view-eye">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <img class="responsive" src="../img/homepage1/jp4.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="simple-text">
+                        <h6 class="h5">Shaving brush and metal stand</h6>
+                    </div>
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="price">
+                        <span>price:</span>
+                        <span><b>74.00$</b></span>
+                    </div>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <a href="home1.html#" class="button">Add To cart</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="products eye_hv">
+                <div class="products-view open-popup" data-rel="3">
+                    <div class="product-view-eye">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <img class="responsive" src="../img/homepage1/jp5.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="simple-text">
+                        <h6 class="h5">The osprey straight razor</h6>
+                    </div>
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="price">
+                        <span>price:</span>
+                        <span><b>295.00$</b></span>
+                    </div>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <a href="home1.html#" class="button">Add To cart</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="products eye_hv">
+                <div class="products-view open-popup" data-rel="3">
+                    <div class="product-view-eye">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <img class="responsive" src="../img/homepage1/jp6.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="simple-text">
+                        <h6 class="h5">Edwin jagger shaving brush in ebony</h6>
+                    </div>
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="price">
+                        <span>price:</span>
+                        <span><b>113.50$</b></span>
+                    </div>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <a href="home1.html#" class="button">Add To cart</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="products eye_hv">
+                <div class="products-view open-popup" data-rel="3">
+                    <div class="product-view-eye">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <img class="responsive" src="../img/homepage1/jp8.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="simple-text">
+                        <h6 class="h5">Value shave pack</h6>
+                    </div>
+                    <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                    <div class="price">
+                        <span>price:</span>
+                        <span><b>95.00$</b></span>
+                    </div>
+                </div>
+                <div class="empty-space marg-sm-b20 marg-lg-b35"></div>
+                <a href="home1.html#" class="button">Add To cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="empty-space marg-sm-b50 marg-md-b70 marg-lg-b150"></div>
+
+<!--map-->
+<div class="map" id="map-canvas" data-lat="40.677763" data-lng="-73.943869" data-zoom="13"></div>
+<div class="addresses-block">
+    <a class="marker" data-lat="40.675653" data-lng="-73.936754"
+       data-string="1. Here is some address or email or phone or something else..."></a>
+</div>
+<!--map-->
+
+<footer class="footer" style="background-color: #303030" id="contacts-anchor">
+    <div class="empty-space marg-lg-b65"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-logo-part simple-text">
+                    <a href="home1.html#home-anchor" class="footer-logo anchor-link">
+                        <img src="../img/cartel-logo.png" alt="">
+                        <span class="h5">The Barber Shop</span>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur consequatur
+                        consequuntur dicta dolor itaque provident quasi quia velit voluptate.</p>
+                </div>
+                <div class="empty-space marg-lg-b35"></div>
+                <ul class="social">
+                    <li><a href="home1.html#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="home1.html#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="home1.html#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="home1.html#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                </ul>
+                <div class="empty-space marg-lg-b40"></div>
+            </div>
+            <div class="col-lg-3 col-lg-offset-1 col col-md-4 col-md-offset-0 col-sm-5 col-sm-offset-1">
+                <div class="whoWe_are_descr">
+                    <div class="simple-text">
+                        <p class="section-title">Contacts</p>
+                    </div>
+                    <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                    <ul>
+                        <li>
+                            <span>E-mail: </span><a href="mailto:barbershop@cartel.com">barbershop@cartel.com</a></li>
+
+                        <li>
+                            <span>Phone</span>: <a href="tel:+80442343456"> 8 (044) 718 34 09</a>
+                        </li>
+                        <li>
+                            <span>Adress: </span>USA, NY, 7th Street, 89/217
+                        </li>
+                    </ul>
+                </div>
+                <div class="empty-space marg-lg-b40"></div>
+            </div>
+            <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12">
+                <div class="footer-insta">
+                    <div class="simple-text">
+                        <a href="home1.html#" class="section-title">instagram</a>
+                    </div>
+                    <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                    <div class="insta-items-wrap">
+                        <a href="home1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-1.jpg" alt="">
+                        </a>
+                        <a href="home1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-2.jpg" alt="">
+                        </a>
+                        <a href="home1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-3.jpg" alt="">
+                        </a>
+                        <a href="home1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-4.jpg" alt="">
+                        </a>
+                        <a href="home1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-5.jpg" alt="">
+                        </a>
+                        <a href="home1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-6.jpg" alt="">
+                        </a>
+                        <a href="home1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-7.jpg" alt="">
+                        </a>
+                        <a href="home1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-8.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="empty-space marg-lg-b40"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            © 2018 All Rights reserved. Development by <a href="https://themeforest.net/user/invisiothemes" target="_blank">InvisioThemes</a>
+        </div>
+    </div>
+    <div class="empty-space marg-lg-b35"></div>
+</footer>
+
+<!--Log-in popup-->
+<div class="popup-wrapper">
+    <div class="bg-layer"></div>
+    <div class="popup-content" data-rel="1" id="log-in-popup">
+        <div class="layer-close"></div>
+        <div class="popup-container">
+            <div class="popup-align">
+                <div class="simple-text center">
+                    <div class="h2">Log in</div>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <div class="popup-col-wrap">
+                    <div class="col-50">
+                        <input class="simple-input" type="email" placeholder="Email">
+                        <div class="empty-space marg-lg-b10"></div>
+                        <input class="simple-input" type="password" placeholder="Password">
+                        <div class="empty-space marg-lg-b25"></div>
+                        <div class="simple-text">
+                            <p>Forgot your password?</p>
+                        </div>
+                        <div class="empty-space marg-lg-b35"></div>
+                        <a href="home1.html#" class="button wide">Submit</a>
+                    </div>
+                    <div class="col-50">
+                        <div class="empty-space marg-xs-b30"></div>
+                        <div class="simple-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestiae placeat quae
+                                reiciendis tenetur voluptatem!</p>
+                        </div>
+                        <div class="empty-space marg-lg-b35"></div>
+                        <a href="home1.html#" class="button half-width">Twitter</a>
+                        <a href="home1.html#" class="button half-width">Facebook</a>
+                    </div>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50 clearfix"></div>
+                <div class="simple-text center">
+                    <a href="home1.html#" class="h5 open-popup" data-rel="2">Sign up now</a>
+                </div>
+            </div>
+            <div class="button-close">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Sign-up popup-->
+<div class="popup-wrapper">
+    <div class="bg-layer"></div>
+    <div class="popup-content" data-rel="2" id="sign-up-popup">
+        <div class="layer-close"></div>
+        <div class="popup-container">
+            <div class="popup-align">
+                <div class="simple-text center">
+                    <div class="h2">Sign up</div>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <div class="popup-col-wrap">
+                    <div class="col-50">
+                        <input class="simple-input" type="text" placeholder="Name">
+                        <div class="empty-space marg-lg-b10"></div>
+                        <input class="simple-input" type="email" placeholder="Email">
+                        <div class="empty-space marg-lg-b10"></div>
+                        <input class="simple-input" type="password" placeholder="Password">
+                        <div class="empty-space marg-lg-b10"></div>
+                        <input class="simple-input" type="password" placeholder="Repeat password">
+                        <div class="empty-space marg-lg-b35"></div>
+                        <a href="home1.html#" class="button wide">Submit</a>
+                    </div>
+                    <div class="col-50">
+                        <div class="empty-space marg-xs-b30"></div>
+                        <div class="simple-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestiae placeat quae
+                                reiciendis tenetur voluptatem!</p>
+                        </div>
+                        <div class="empty-space marg-lg-b35"></div>
+                        <a href="home1.html#" class="button half-width">Twitter</a>
+                        <a href="home1.html#" class="button half-width">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="button-close">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--product view popup-->
+<div class="popup-wrapper">
+    <div class="bg-layer"></div>
+    <div class="popup-content" data-rel="3" id="product-view-popup">
+        <div class="layer-close"></div>
+        <div class="popup-container">
+            <div class="popup-align">
+                <div class="popup-col-wrap clearfix">
+                    <div class="col-50">
+                        <img class="responsive" src="../img/homepage1/popup-img.png" alt="">
+                    </div>
+                    <div class="col-50 center-xs">
+                        <div class="empty-space marg-xs-b20"></div>
+                        <div class="simple-text">
+                            <div class="h5">5-piece shaving set with merkup hd 34c</div>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                        <div class="popup-text">
+                            <span>Price: </span>
+                            <b>148.00$</b>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                        <div class="popup-text">
+                            <span>Available: </span>
+                            <em>Yes</em>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                        <div class="simple-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dignissimos dolore eaque fugit
+                                incidunt perspiciatis reprehenderit, unde! Beatae consequuntur corporis eius ex
+                                expeuuntur
+                                eligendi esse in necessitatibus placeat soluta temporibus, tenetur voluptatem!</p>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                        <div class="popup-text clearfix">
+                            <span>Quanity:</span>
+                            <div class="quantity">
+                                <button class="minus-btn" type="button" name="button">
+                                    <img src="../img/left_arr.png" alt="">
+                                </button>
+                                <input type="text" name="name" value="1">
+
+                                <button class="plus-btn" type="button" name="button">
+                                    <img src="../img/right_arr.png" alt="">
+                                </button>
+                            </div>
+                            <a href="home1.html#" class="button">Add to card</a>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                        <div class="popup-text">
+                            <span>Share: </span>
+                            <ul class="social">
+                                <li><a href="home1.html#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="home1.html#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="home1.html#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="home1.html#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-close">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Theme config pop-up-->
+<div class="theme-config">
+    <!--color picking-->
+    <div class="title">Select Color:</div>
+    <div class="colors-wrapper">
+        <input class="jscolor" onchange="updateScheme(this.jscolor)" value="FFBE6A"/>
+    </div>
+    <div class="open-config"><img src="../img/gear-icon.png" alt=""><img src="../img/gear-icon.png" alt=""><img
+            src="../img/gear-icon.png" alt=""></div>
+    <div class="empty-space marg-lg-b10"></div>
+    <div class="title type-2">Select fonts:</div>
+    <div class="simple-text">
+        <h6>Titles</h6>
+    </div>
+    <div class="empty-space marg-lg-b10"></div>
+    <!--fonts picking-->
+    <div class="simple-select">
+        <select id="font-title">
+            <option selected value="Anton@font-1-1">Anton</option>
+            <option value="Josefin+Sans:300,400@font-1-2">Josefin Sans</option>
+            <option value="Hind:700@font-1-3">Hind</option>
+            <option value="Arvo:700@font-1-4">Arvo</option>
+        </select>
+    </div>
+    <div class="empty-space marg-lg-b10"></div>
+    <div class="simple-text">
+        <b>Text</b>
+    </div>
+    <div class="empty-space marg-lg-b10"></div>
+    <div class="simple-select">
+        <select id="font-text">
+            <option selected value="Kreon:400,700@font-2-1">Kreon</option>
+            <option value="Martel:400,700@font-2-2">Martel</option>
+            <option value="Maven+Pro:400,700@font-2-3">Maven Pro</option>
+            <option value="Cabin:400,700@font-2-4">Cabin</option>
+        </select>
+    </div>
+    <div class="empty-space marg-lg-b5"></div>
+</div>
+
+
+<!-- FONTS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Anton|Kreon" rel="stylesheet"> -->
+
+<!-- CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/swiper.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/simplelightbox.min.css">
+<link rel="stylesheet" href="../css/sumoselect.css">
+<link href="../css/style.css" rel="stylesheet">
+<style id="color-scheme-inline"></style>
+
+<!--scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="../js/swiper.jquery.min.js"></script>
+<script src="../js/jquery.sumoselect.min.js"></script>
+<script src="../js/simple-lightbox.min.js"></script>
+<script src="../js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOJxqBTpjRXdgM8UM0UXuLCmK_AKF9NPs&language=en"></script>
+<script src="../js/isotope-docs.min.js"></script>
+<script src="../js/global.js"></script>
+
+<script src="../js/jscolor.min.js"></script>
+<script src="../js/colorsfonts.js"></script>
+<script src="../js/anchors.nav.js"></script>
+</body>
+</html>

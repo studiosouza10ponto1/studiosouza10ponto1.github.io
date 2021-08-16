@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Shopping cart</title>
+
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <style>
+        #loader-wrapper {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 110;
+            overflow: hidden;
+            background: #000;
+        }
+
+        @keyframes loader {
+            0%, 10%, 100% {
+                width: 80px;
+                height: 80px;
+            }
+            65% {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @keyframes loaderBlock {
+            0%, 30% {
+                transform: rotate(0);
+            }
+            55% {
+                background-color: #FFBE9A;
+            }
+            100% {
+                transform: rotate(90deg);
+            }
+        }
+
+        @keyframes loaderBlockInverse {
+            0%, 20% {
+                transform: rotate(0);
+            }
+            55% {
+                background-color: #FFBE9A;
+            }
+            100% {
+                transform: rotate(-90deg);
+            }
+        }
+
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+            animation: loader 1.2s infinite ease-in-out;
+        }
+
+        .loader span {
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: #FFBE6A;
+            animation: loaderBlock 1.2s infinite ease-in-out both;
+        }
+
+        .loader span:nth-child(1) {
+            top: 0;
+            left: 0;
+        }
+
+        .loader span:nth-child(2) {
+            top: 0;
+            right: 0;
+            animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+        }
+
+        .loader span:nth-child(3) {
+            bottom: 0;
+            left: 0;
+            animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+        }
+
+        .loader span:nth-child(4) {
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader-wrapper">
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<header class="header no-shadow">
+    <a href="home1.html" id="logo"><img src="../img/cartel-logo-black.png" alt=""></a>
+    <div class="header-content">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="home1.html" class="nav-item-link">Home</a></li>
+                <li class="nav-list-item"><a href="home1.html#about_us-anchor" class="nav-item-link">About us</a></li>
+                <li class="nav-list-item"><a href="home1.html#services-anchor" class="nav-item-link">Services</a></li>
+                <li class="nav-list-item"><a href="home1.html#staff-anchor" class="nav-item-link">Staff</a></li>
+                <li class="nav-list-item"><a href="home1.html#gallery-anchor" class="nav-item-link">Gallery</a></li>
+                <li class="nav-list-item"><a href="home1.html#products-anchor" class="nav-item-link">Products</a></li>
+                <li class="nav-list-item"><a href="home1.html#contacts-anchor" class="nav-item-link">Contacts</a></li>
+            </ul>
+        </nav>
+        <a href="cart-1.html" class="busket">
+            <img src="../img/busket.png" alt="">
+            <span class="busket-amount">1</span>
+            <span class="busket-price">
+                total: <i>149.95$</i>
+            </span>
+        </a>
+        <div class="sign-up">
+            <a href="cart-1.html#" class="open-popup" data-rel="1">Log in</a>
+            <span>/</span>
+            <a href="cart-1.html#" class="open-popup" data-rel="2">Sing up</a>
+        </div>
+    </div>
+    <div class="menu-mobile-wrap">
+        <div class="menu-mobile">
+            <span></span>
+        </div>
+    </div>
+</header>
+
+<div class="empty-space marg-md-b70 marg-lg-b110"></div>
+
+<div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b120"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="simple-text center">
+                <h1 class="h1">Shopping cart</h1>
+            </div>
+            <div class="empty-space marg-lg-b30"></div>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <div class="simple-text center">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, non. ipsum dolor sit amet,
+                    consectetur adipisicing elit. Necessitatibus, accusantium.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="empty-space marg-sm-b40 marg-lg-b60"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="cart_menu clearfix">
+            <div class="col-md-6 col-sm-5">
+                <div class="simple-text">
+                    <div class="h6">Added items</div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <div class="simple-text">
+                    <div class="h6">price</div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3">
+                <div class="simple-text">
+                    <div class="h6">Quantity</div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <div class="simple-text">
+                    <div class="h6">Total</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="shopping_cart clearfix">
+            <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+            <div class="flex_center clearfix">
+
+                <div class="col-md-1 col-sm-12 center-md">
+                    <div class="button-close">
+                        <span></span>
+                    </div>                </div>
+                <div class="col-md-2 col-sm-6">
+                    <img class="responsive" src="../img/contact/prod-img1.jpg" alt="">
+                </div>
+                <div class="col-md-3 col-sm-6 center-md">
+                    <div class="simple-text">
+                        <div class="whoWe_are_title">opi nail envy</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, beatae.</p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <div class="price center"><span>180.00$</span></div>
+                </div>
+                <div class="col-md-2 col-sm-6 center">
+                    <div class="quantity">
+                        <button class="minus-btn" type="button" name="button">
+                            <img src="../img/left_arr.png" alt="">
+                        </button>
+                        <input type="text" name="name" value="1">
+
+                        <button class="plus-btn" type="button" name="button">
+                            <img src="../img/right_arr.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <div class="total center">
+                        <span>180.00$</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="empty-space marg-sm-b0 marg-lg-b50"></div>
+        </div>
+
+        <div class="shopping_cart clearfix">
+            <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+            <div class="flex_center clearfix">
+
+                <div class="col-md-1 col-sm-12 center-md">
+                    <div class="button-close">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <img class="responsive" src="../img/contact/prod-img2.jpg" alt="">
+                </div>
+                <div class="col-md-3 col-sm-6 center-md">
+                    <div class="simple-text">
+                        <div class="whoWe_are_title">opi nail envy</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, beatae.</p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <div class="price center"><span>100.00$</span></div>
+                </div>
+                <div class="col-md-2 col-sm-6 center">
+                    <div class="quantity">
+                        <button class="minus-btn" type="button" name="button">
+                            <img src="../img/left_arr.png" alt="">
+                        </button>
+                        <input type="text" name="name" value="1">
+
+                        <button class="plus-btn" type="button" name="button">
+                            <img src="../img/right_arr.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <div class="total center">
+                        <span>100.00$</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="empty-space marg-sm-b0 marg-lg-b50"></div>
+        </div>
+
+        <div class="shopping_cart clearfix">
+            <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+            <div class="flex_center clearfix">
+
+                <div class="col-md-1 col-sm-12 center-md">
+                    <div class="button-close">
+                        <span></span>
+                    </div>                </div>
+                <div class="col-md-2 col-sm-6">
+                    <img class="responsive" src="../img/contact/prod-img3.jpg" alt="">
+                </div>
+                <div class="col-md-3 col-sm-6 center-md">
+                    <div class="simple-text">
+                        <div class="whoWe_are_title">opi nail envy</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, beatae.</p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <div class="price center"><span>50.00$</span></div>
+                </div>
+                <div class="col-md-2 col-sm-6 center">
+                    <div class="quantity">
+                        <button class="minus-btn" type="button" name="button">
+                            <img src="../img/left_arr.png" alt="">
+                        </button>
+                        <input type="text" name="name" value="1">
+
+                        <button class="plus-btn" type="button" name="button">
+                            <img src="../img/right_arr.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <div class="total center">
+                        <span>50.00$</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="empty-space marg-sm-b0 marg-lg-b50"></div>
+        </div>
+
+    </div>
+    <div class="empty-space marg-sm-b50 marg-lg-b50"></div>
+    <div class="row">
+        <div class="flex_center tt_price">
+            <div class="col-md-4">
+                <div class="simple-text">
+                    <span class="h5">do you have promo code?</span>
+                </div>
+            </div>
+            <div class="empty-space marg-sm-b20 marg-lg-b0"></div>
+            <div class="col-md-3">
+                <input class="simple-input" type="text" placeholder="Promo code">
+            </div>
+            <div class="empty-space marg-sm-b20 marg-lg-b0"></div>
+            <div class="col-md-offset-1 col-md-4">
+                <div class="simple-text total_price">
+                    <span class="h4">Total price: </span><span>330.00$</span>
+                </div>
+            </div>
+        </div>
+        <div class="empty-space marg-md-b30 marg-lg-b50"></div>
+        <div class="col-md-12 right center-sm">
+            <a href="checkout1-1.html" class="button">Proceed to checkout</a>
+        </div>
+    </div>
+</div>
+
+<div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b140"></div>
+
+<!--footer-->
+<footer class="footer" style="background-color: #303030" id="contacts-anchor">
+    <div class="empty-space marg-lg-b65"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-logo-part simple-text">
+                    <a href="home1.html" class="footer-logo anchor-link">
+                        <img src="../img/cartel-logo.png" alt="">
+                        <span class="h5">The Barber Shop</span>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur consequatur
+                        consequuntur dicta dolor itaque provident quasi quia velit voluptate.</p>
+                </div>
+                <div class="empty-space marg-lg-b35"></div>
+                <ul class="social">
+                    <li><a href="cart-1.html#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="cart-1.html#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="cart-1.html#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="cart-1.html#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                </ul>
+                <div class="empty-space marg-lg-b40"></div>
+            </div>
+            <div class="col-lg-3 col-lg-offset-1 col col-md-4 col-md-offset-0 col-sm-5 col-sm-offset-1">
+                <div class="whoWe_are_descr">
+                    <div class="simple-text">
+                        <p class="section-title">Contacts</p>
+                    </div>
+                    <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                    <ul>
+                        <li>
+                            <span>E-mail: </span><a href="mailto:barbershop@cartel.com">barbershop@cartel.com</a></li>
+
+                        <li>
+                            <span>Phone</span>: <a href="tel:+80442343456"> 8 (044) 718 34 09</a>
+                        </li>
+                        <li>
+                            <span>Adress: </span>USA, NY, 7th Street, 89/217
+                        </li>
+                    </ul>
+                </div>
+                <div class="empty-space marg-lg-b40"></div>
+            </div>
+            <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12">
+                <div class="footer-insta">
+                    <div class="simple-text">
+                        <a href="cart-1.html#" class="section-title">instagram</a>
+                    </div>
+                    <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                    <div class="insta-items-wrap">
+                        <a href="cart-1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-1.jpg" alt="">
+                        </a>
+                        <a href="cart-1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-2.jpg" alt="">
+                        </a>
+                        <a href="cart-1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-3.jpg" alt="">
+                        </a>
+                        <a href="cart-1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-4.jpg" alt="">
+                        </a>
+                        <a href="cart-1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-5.jpg" alt="">
+                        </a>
+                        <a href="cart-1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-6.jpg" alt="">
+                        </a>
+                        <a href="cart-1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-7.jpg" alt="">
+                        </a>
+                        <a href="cart-1.html#" class="footer-insta-item">
+                            <img src="../img/homepage1/insta-8.jpg" alt="">
+                        </a></div>
+                </div>
+                <div class="empty-space marg-lg-b40"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            © 2018 All Rights reserved. Development by <a href="https://themeforest.net/user/invisiothemes" target="_blank">InvisioThemes</a>
+        </div>
+    </div>
+    <div class="empty-space marg-lg-b35"></div>
+</footer>
+
+<!--Log-in popup-->
+<div class="popup-wrapper">
+    <div class="bg-layer"></div>
+    <div class="popup-content" data-rel="1" id="log-in-popup">
+        <div class="layer-close"></div>
+        <div class="popup-container">
+            <div class="popup-align">
+                <div class="simple-text center">
+                    <div class="h2">Log in</div>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <div class="popup-col-wrap">
+                    <div class="col-50">
+                        <input class="simple-input" type="email" placeholder="Email">
+                        <div class="empty-space marg-lg-b10"></div>
+                        <input class="simple-input" type="password" placeholder="Password">
+                        <div class="empty-space marg-lg-b25"></div>
+                        <div class="simple-text">
+                            <p>Forgot your password?</p>
+                        </div>
+                        <div class="empty-space marg-lg-b35"></div>
+                        <a href="cart-1.html#" class="button wide">Submit</a>
+                    </div>
+                    <div class="col-50">
+                        <div class="empty-space marg-xs-b30"></div>
+                        <div class="simple-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestiae placeat quae
+                                reiciendis tenetur voluptatem!</p>
+                        </div>
+                        <div class="empty-space marg-lg-b35"></div>
+                        <a href="cart-1.html#" class="button half-width">Twitter</a>
+                        <a href="cart-1.html#" class="button half-width">Facebook</a>
+                    </div>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50 clearfix"></div>
+                <div class="simple-text center">
+                    <a href="cart-1.html#" class="h5 open-popup" data-rel="2">Sign up now</a>
+                </div>
+            </div>
+            <div class="button-close">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Sign-up popup-->
+<div class="popup-wrapper">
+    <div class="bg-layer"></div>
+    <div class="popup-content" data-rel="2" id="sign-up-popup">
+        <div class="layer-close"></div>
+        <div class="popup-container">
+            <div class="popup-align">
+                <div class="simple-text center">
+                    <div class="h2">Sign up</div>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <div class="popup-col-wrap">
+                    <div class="col-50">
+                        <input class="simple-input" type="text" placeholder="Name">
+                        <div class="empty-space marg-lg-b10"></div>
+                        <input class="simple-input" type="email" placeholder="Email">
+                        <div class="empty-space marg-lg-b10"></div>
+                        <input class="simple-input" type="password" placeholder="Password">
+                        <div class="empty-space marg-lg-b10"></div>
+                        <input class="simple-input" type="password" placeholder="Repeat password">
+                        <div class="empty-space marg-lg-b35"></div>
+                        <a href="cart-1.html#" class="button wide">Submit</a>
+                    </div>
+                    <div class="col-50">
+                        <div class="empty-space marg-xs-b30"></div>
+                        <div class="simple-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestiae placeat quae
+                                reiciendis tenetur voluptatem!</p>
+                        </div>
+                        <div class="empty-space marg-lg-b35"></div>
+                        <a href="cart-1.html#" class="button half-width">Twitter</a>
+                        <a href="cart-1.html#" class="button half-width">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="button-close">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Theme config pop-up-->
+<div class="theme-config">
+    <!--color picking-->
+    <div class="title">Select Color:</div>
+    <div class="colors-wrapper">
+        <input class="jscolor" onchange="updateScheme(this.jscolor)" value="FFBE6A"/>
+    </div>
+    <div class="open-config"><img src="../img/gear-icon.png" alt=""><img src="../img/gear-icon.png" alt=""><img
+            src="../img/gear-icon.png" alt=""></div>
+    <div class="empty-space marg-lg-b10"></div>
+    <div class="title type-2">Select fonts:</div>
+    <div class="simple-text">
+        <h6>Titles</h6>
+    </div>
+    <div class="empty-space marg-lg-b10"></div>
+    <!--fonts picking-->
+    <div class="simple-select">
+        <select id="font-title">
+            <option selected value="Anton@font-1-1">Anton</option>
+            <option value="Josefin+Sans:300,400@font-1-2">Josefin Sans</option>
+            <option value="Hind:700@font-1-3">Hind</option>
+            <option value="Arvo:700@font-1-4">Arvo</option>
+        </select>
+    </div>
+    <div class="empty-space marg-lg-b10"></div>
+    <div class="simple-text">
+        <b>Text</b>
+    </div>
+    <div class="empty-space marg-lg-b10"></div>
+    <div class="simple-select">
+        <select id="font-text">
+            <option selected value="Kreon:400,700@font-2-1">Kreon</option>
+            <option value="Martel:400,700@font-2-2">Martel</option>
+            <option value="Maven+Pro:400,700@font-2-3">Maven Pro</option>
+            <option value="Cabin:400,700@font-2-4">Cabin</option>
+        </select>
+    </div>
+    <div class="empty-space marg-lg-b5"></div>
+</div>
+
+<!-- FONTS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Anton|Kreon" rel="stylesheet"> -->
+
+<!-- CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/swiper.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/simplelightbox.min.css">
+<link rel="stylesheet" href="../css/sumoselect.css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<style id="color-scheme-inline"></style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="../js/swiper.jquery.min.js"></script>
+<script src="../js/jquery.sumoselect.min.js"></script>
+<script src="../js/simple-lightbox.min.js"></script>
+<script src="../js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOJxqBTpjRXdgM8UM0UXuLCmK_AKF9NPs&language=en"></script>
+<!--<script src="js/isotope-docs.min.js"></script>-->
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/global.js"></script>
+
+<script src="../js/jscolor.min.js"></script>
+<script src="../js/colorsfonts.js"></script>
+</body>
+</html>
